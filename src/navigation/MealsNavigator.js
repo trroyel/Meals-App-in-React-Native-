@@ -36,17 +36,23 @@ const MealsNavigator = createStackNavigator({
         }
     });
 
-const bottomTabnavigatorConfig = {
+const bottomTabNavigatorConfig = {
     Meals: {
         screen: MealsNavigator,
         navigationOptions: {
-            tabBarIcon: tabInfo => <Ionicons name="ios-restaurant" size={25} color={tabInfo.tintColor} />
-        }
+            tabBarIcon: tabInfo => {
+                return <Ionicons name="ios-restaurant" size={25} color={tabInfo.tintColor} />
+            },
+            tabBarColor: Colors.primary
+        },
     },
     Favorites: {
         screen: FavoritesScreen,
         navigationOptions: {
-            tabBarIcon: tabInfo => <Ionicons name="ios-heart" size={25} color={tabInfo.tintColor} />
+            tabBarIcon: tabInfo => {
+                return <Ionicons name="ios-heart" size={25} color={tabInfo.tintColor} />
+            },
+            tabBarColor: Colors.accent
         }
     }
 };
@@ -54,12 +60,12 @@ const bottomTabnavigatorConfig = {
 
 const MealsFabTabNavigator = Platform.OS === 'android'
     ? createMaterialBottomTabNavigator(
-        bottomTabnavigatorConfig, {
+        bottomTabNavigatorConfig, {
         activeTintColor: Colors.accent,
         shifting: true
     })
     : createBottomTabNavigator(
-        bottomTabnavigatorConfig, {
+        bottomTabNavigatorConfig, {
         tabBarOptions: {
             activeTintColor: Colors.accent
         }
