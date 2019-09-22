@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableNativeFeedback, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, TouchableNativeFeedback, ImageBackground , Platform} from 'react-native';
 
 const MealItem = props => {
     return (
         <View style={styles.mealItem}>
-            <TouchableNativeFeedback>
+            <TouchableNativeFeedback onPress={props.onSlectMeal}>
                 <View>
                     <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
                         <ImageBackground
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f5f5f5',
         marginVertical: 12,
         borderRadius: 10,
-        overflow: 'hidden'
+        elevation: 5,
+        overflow:  (Platform.OS === 'android' && Platform.Version >=21) ? 'hidden' : 'visible'
     },
     container: {
         flex: 1,
@@ -46,7 +47,6 @@ const styles = StyleSheet.create({
         shadowOpacity: .26,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 10,
-        elevation: 3,
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         padding: 15,
