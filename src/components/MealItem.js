@@ -8,13 +8,21 @@ const MealItem = props => {
                 <View>
                     <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
                         <ImageBackground
-                            style={{ width: '100%'}}
-                            source={{ uri: props.imageUrl }} />
+                            style={styles.bgImage}
+                            source={{ uri: props.imageUrl }}>
+                            <View style={styles.titleContainer}>
+                                <Text
+                                    style={styles.title}
+                                    numberOfLines={1}>
+                                    {props.title}
+                                </Text>
+                            </View>
+                        </ImageBackground>
                     </View>
                     <View style={{ ...styles.mealRow, ...styles.mealDetail }}>
-                        <Text>{props.duration}</Text>
-                        <Text>{props.complexity.toString()}</Text>
-                        <Text>{props.affordability.toString()}</Text>
+                        <Text>{props.duration}M</Text>
+                        <Text>{props.complexity.toUpperCase()}</Text>
+                        <Text>{props.affordability.toUpperCase()}</Text>
                     </View>
                 </View>
             </TouchableNativeFeedback>
@@ -26,8 +34,10 @@ const styles = StyleSheet.create({
     mealItem: {
         height: 200,
         width: '100%',
-        backgroundColor: '#ccc',
-        marginVertical: 15
+        backgroundColor: '#f5f5f5',
+        marginVertical: 12,
+        borderRadius: 10,
+        overflow: 'hidden'
     },
     container: {
         flex: 1,
@@ -45,12 +55,28 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     mealHeader: {
-        height: '90%'
+        height: '85%'
     },
     mealDetail: {
         paddingHorizontal: 10,
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        height: '15%'
+    },
+    bgImage: {
+        height: '100%',
+        width: '100%',
+        justifyContent: 'flex-end'
+    },
+    titleContainer: {
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        paddingVertical: 5,
+        paddingHorizontal: 12
+    },
+    title: {
+        fontSize: 22,
+        color: 'white',
+        textAlign: 'center'
     }
 });
 

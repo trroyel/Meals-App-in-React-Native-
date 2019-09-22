@@ -15,7 +15,8 @@ const CategoryMealsScreen = props => {
                 duration={itemData.item.duration}
                 complexity={itemData.item.complexity}
                 affordability={itemData.item.affordability}
-                imageUrl={itemData.item.imageUrl} />
+                imageUrl={itemData.item.imageUrl}
+                onSlectMeal={()=>{}} />
         );
     };
 
