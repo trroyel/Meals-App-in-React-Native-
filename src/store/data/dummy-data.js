@@ -3,22 +3,22 @@ import Meal from '../models/meal';
 
 export const CATEGORIES = [
     new Category('c1', 'Italian', '#f5428d'),
-    new Category('c2', 'Quick & Easy', '#f54242'),
-    new Category('c3', 'Hamburgers', '#f5a442'),
-    new Category('c4', 'German', '#f5d142'),
-    new Category('c5', 'Light & Lovely', '#368dff'),
-    new Category('c6', 'Exotic', '#41d95d'),
+    new Category('c2', 'Chiness', '#f54242'),
+    new Category('c3', 'Indian', '#f5a442'),
+    new Category('c4', 'Bengali', '#f5d142'),
+    new Category('c5', 'Thai', '#368dff'),
+    new Category('c6', 'Kashmiri', '#41d95d'),
     new Category('c7', 'Breakfast', '#9eecff'),
-    new Category('c8', 'Asian', '#b9ffb0'),
+    new Category('c8', 'Dinner', '#b9ffb0'),
     new Category('c9', 'French', '#ffc7ff'),
-    new Category('c10', 'Summer', '#47fced')
+    new Category('c10', 'Lunch', '#47fced')
   ];
   
   export const MEALS = [
     new Meal(
       'm1',
       ['c1', 'c2'],
-      'Spaghetti with Tomato Sauce',
+      'Special Biriyani',
       'affordable',
       'simple',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg/800px-Spaghetti_Bolognese_mit_Parmesan_oder_Grana_Padano.jpg',
@@ -32,13 +32,7 @@ export const CATEGORIES = [
         'Cheese (optional)'
       ],
       [
-        'Cut the tomatoes and the onion into small pieces.',
-        'Boil some water - add salt to it once it boils.',
-        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
-        'In the meantime, heaten up some olive oil and add the cut onion.',
-        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
-        'The sauce will be done once the spaghetti are.',
-        'Feel free to add some cheese on top of the finished dish.'
+        'You Can Make it easily',
       ],
       false,
       true,
@@ -49,22 +43,16 @@ export const CATEGORIES = [
     new Meal(
       'm2',
       ['c2'],
-      'Toast Hawaii',
+      'Chicken Biriyani',
       'affordable',
       'simple',
       'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
       10,
       [
-        '1 Slice White Bread',
-        '1 Slice Ham',
-        '1 Slice Pineapple',
-        '1-2 Slices of Cheese',
-        'Butter'
+        '1'
       ],
       [
-        'Butter one side of the white bread',
-        'Layer ham, the pineapple and cheese on the white bread',
-        'Bake the toast for round about 10 minutes in the oven at 200°C'
+        'You can make it easily',
       ],
       false,
       false,
@@ -75,25 +63,16 @@ export const CATEGORIES = [
     new Meal(
       'm3',
       ['c3'],
-      'Classic Hamburger',
+      'French Fry',
       'pricey',
       'simple',
       'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
       45,
       [
         '300g Cattle Hack',
-        '1 Tomato',
-        '1 Cucumber',
-        '1 Onion',
-        'Ketchup',
-        '2 Burger Buns'
       ],
       [
-        'Form 2 patties',
-        'Fry the patties for c. 4 minutes on each side',
-        'Quickly fry the buns for c. 1 minute on each side',
-        'Bruch buns with ketchup',
-        'Serve burger with tomato, cucumber and onion'
+        'You can make it easily'
       ],
       false,
       false,
@@ -104,29 +83,16 @@ export const CATEGORIES = [
     new Meal(
       'm4',
       ['c4'],
-      'Wiener Schnitzel',
+      'Hot coffee',
       'luxurious',
       'challenging',
       'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
       60,
       [
         '8 Veal Cutlets',
-        '4 Eggs',
-        '200g Bread Crumbs',
-        '100g Flour',
-        '300ml Butter',
-        '100g Vegetable Oil',
-        'Salt',
-        'Lemon Slices'
       ],
       [
-        'Tenderize the veal to about 2–4mm, and salt on both sides.',
-        'On a flat plate, stir the eggs briefly with a fork.',
-        'Lightly coat the cutlets in flour then dip into the egg, and finally, coat in breadcrumbs.',
-        'Heat the butter and oil in a large pan (allow the fat to get very hot) and fry the schnitzels until golden brown on both sides.',
-        'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes ‘fluffy’.',
-        'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
-        'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
+        'You can make it easlily'
       ],
       false,
       false,
@@ -137,28 +103,16 @@ export const CATEGORIES = [
     new Meal(
       'm5',
       ['c2', 'c5', 'c10'],
-      'Salad with Smoked Salmon',
+      'Salad with Smoked Chilly',
       'luxurious',
       'simple',
       'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
       15,
       [
-        'Arugula',
-        "Lamb's Lettuce",
-        'Parsley',
-        'Fennel',
-        '200g Smoked Salmon',
-        'Mustard',
-        'Balsamic Vinegar',
-        'Olive Oil',
-        'Salt and Pepper'
+        'Arugula'
       ],
       [
-        'Wash and cut salad and herbs',
-        'Dice the salmon',
-        'Process mustard, vinegar and olive oil into a dessing',
-        'Prepare the salad',
-        'Add salmon cubes and dressing'
+        'You can make it easily'
       ],
       true,
       false,
@@ -169,29 +123,16 @@ export const CATEGORIES = [
     new Meal(
       'm6',
       ['c6', 'c10'],
-      'Delicious Orange Mousse',
+      'Orange Juice',
       'affordable',
       'hard',
       'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
       240,
       [
-        '4 Sheets of Gelatine',
-        '150ml Orange Juice',
-        '80g Sugar',
-        '300g Yoghurt',
-        '200g Cream',
-        'Orange Peel'
+        'Nothing Special'
       ],
       [
-        'Dissolve gelatine in pot',
-        'Add orange juice and sugar',
-        'Take pot off the stove',
-        'Add 2 tablespoons of yoghurt',
-        'Stir gelatin under remaining yoghurt',
-        'Cool everything down in the refrigerator',
-        'Whip the cream and lift it under die orange mass',
-        'Cool down again for at least 4 hours',
-        'Serve with orange peel'
+        'You can make it easily'
       ],
       true,
       false,
@@ -202,19 +143,13 @@ export const CATEGORIES = [
     new Meal(
       'm7',
       ['c7'],
-      'Pancakes',
+      'Special Cakes',
       'affordable',
       'simple',
       'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
       20,
       [
-        '1 1/2 Cups all-purpose Flour',
-        '3 1/2 Teaspoons Baking Powder',
-        '1 Teaspoon Salt',
-        '1 Tablespoon White Sugar',
-        '1 1/4 cups Milk',
-        '1 Egg',
-        '3 Tablespoons Butter, melted'
+        '1 1/2 Cups all-purpose Flour'
       ],
       [
         'In a large bowl, sift together the flour, baking powder, salt and sugar.',
@@ -262,7 +197,7 @@ export const CATEGORIES = [
     new Meal(
       'm9',
       ['c9'],
-      'Chocolate Souffle',
+      'Chocolate Cake',
       'affordable',
       'hard',
       'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
@@ -308,26 +243,16 @@ export const CATEGORIES = [
     new Meal(
       'm10',
       ['c2', 'c5', 'c10'],
-      'Asparagus Salad with Cherry Tomatoes',
+      'Special Salad with Tomatoes',
       'luxurious',
       'simple',
       'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
       30,
       [
         'White and Green Asparagus',
-        '30g Pine Nuts',
-        '300g Cherry Tomatoes',
-        'Salad',
-        'Salt, Pepper and Olive Oil'
       ],
       [
-        'Wash, peel and cut the asparagus',
-        'Cook in salted water',
-        'Salt and pepper the asparagus',
-        'Roast the pine nuts',
-        'Halve the tomatoes',
-        'Mix with asparagus, salad and dressing',
-        'Serve with Baguette'
+        'You can make it easily'
       ],
       true,
       true,
